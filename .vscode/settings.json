@@ -1,0 +1,9 @@
+{
+    "python.analysis.extraPaths": [
+        "./processor/marketplace_processor",
+        "./processor",
+        "./rest_api",
+        "./ledger_sync",
+        "./addressing"
+    ]
+}

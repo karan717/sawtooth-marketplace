@@ -19,10 +19,14 @@ import os
 import sys
 
 
-TOP_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-sys.path.insert(0, os.path.join(TOP_DIR, 'addressing'))
-sys.path.insert(0, os.path.join(TOP_DIR, 'rest_api'))
-sys.path.insert(0, os.path.join(TOP_DIR, 'transaction_creation'))
+#TOP_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+#sys.path.insert(0, os.path.join(TOP_DIR, 'addressing'))
+#sys.path.insert(0, os.path.join(TOP_DIR, 'rest_api'))
+#sys.path.insert(0, os.path.join(TOP_DIR, 'transaction_creation'))
+
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+    'rest_api'))
 
 from api.main import main
 

@@ -25,4 +25,4 @@ WORKDIR /project/sawtooth-marketplace
 
 ENV PATH $PATH:/project/sawtooth-marketplace/bin
 
-CMD ['marketplace-tp']
+CMD ["marketplace-tp"]

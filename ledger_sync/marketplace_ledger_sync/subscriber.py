@@ -14,6 +14,9 @@
 # ------------------------------------------------------------------------------
 
 import logging
+import sys
+
+sys.path.insert(0, '../')
 
 from sawtooth_sdk.messaging.stream import Stream
 from sawtooth_sdk.protobuf.validator_pb2 import Message

@@ -15,6 +15,8 @@
 
 FROM ubuntu:16.04
 
+RUN apt-get install -y -q python3-sawtooth-sdk protobuf-compiler
+
 RUN echo "deb apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8AA7AF1F1091A5FD" && \
     echo 'deb http://repo.sawtooth.me/ubuntu/1.0/stable xenial universe' >> /etc/apt/sources.list && \
     apt-get update && \
@@ -24,8 +26,8 @@ RUN echo "deb apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 
 
 RUN pip3 install rethinkdb
 
-WORKDIR /project/sawtooth-marketplace
+WORKDIR /project/sawtooth-marketplace/ledger_sync/marketplace_ledger_sync
 
-ENV PATH $PATH:/project/sawtooth-marketplace/bin
+ENV PATH $PATH:/project/sawtooth-marketplace/ledger_sync/marketplace_ledger_sync
 
 CMD ["marketplace-ledger-sync"]
