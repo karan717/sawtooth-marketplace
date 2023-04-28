@@ -13,6 +13,10 @@
 # limitations under the License.
 # -----------------------------------------------------------------------------
 
+import os
+import sys
+
+
 from sawtooth_sdk.processor.exceptions import InvalidTransaction
 
 from marketplace_processor.offer.accept_calc import AcceptOfferCalculator

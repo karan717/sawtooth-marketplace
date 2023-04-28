@@ -21,7 +21,7 @@ import re
 import tempfile
 from os.path import dirname as DIRNAME
 
-from grpc.tools.protoc import main as _protoc
+from grpc_tools._protoc_compiler import main as _protoc
 
 TOP_DIR = DIRNAME(DIRNAME(__file__))
 SRC_DIR = os.path.join(TOP_DIR, 'protos')

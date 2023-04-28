@@ -26,8 +26,8 @@ RUN echo "deb apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 
 
 RUN pip3 install rethinkdb
 
-WORKDIR /project/sawtooth-marketplace/ledger_sync/marketplace_ledger_sync
+WORKDIR /project/sawtooth-marketplace
 
-ENV PATH $PATH:/project/sawtooth-marketplace/ledger_sync/marketplace_ledger_sync
+ENV PATH $PATH:/project/sawtooth-marketplace/bin
 
 CMD ["marketplace-ledger-sync"]
