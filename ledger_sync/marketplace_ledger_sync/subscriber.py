@@ -15,8 +15,11 @@
 
 import logging
 import sys
+import os
 
-sys.path.insert(0, '../')
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))),
+    'addressing'))
 
 from sawtooth_sdk.messaging.stream import Stream
 from sawtooth_sdk.protobuf.validator_pb2 import Message
@@ -24,12 +27,9 @@ from sawtooth_sdk.protobuf.events_pb2 import EventList
 from sawtooth_sdk.protobuf.events_pb2 import EventSubscription
 from sawtooth_sdk.protobuf.events_pb2 import EventFilter
 from sawtooth_sdk.protobuf.client_event_pb2 import ClientEventsSubscribeRequest
-from sawtooth_sdk.protobuf.client_event_pb2\
-    import ClientEventsSubscribeResponse
-from sawtooth_sdk.protobuf.client_event_pb2\
-    import ClientEventsUnsubscribeRequest
-from sawtooth_sdk.protobuf.client_event_pb2\
-    import ClientEventsUnsubscribeResponse
+from sawtooth_sdk.protobuf.client_event_pb2 import ClientEventsSubscribeResponse
+from sawtooth_sdk.protobuf.client_event_pb2 import ClientEventsUnsubscribeRequest
+from sawtooth_sdk.protobuf.client_event_pb2 import ClientEventsUnsubscribeResponse
 
 from marketplace_addressing.addresser import NS as NAMESPACE
 

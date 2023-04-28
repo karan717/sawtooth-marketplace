@@ -44,6 +44,7 @@ RUN pip3 install ujson==3.1.0
 RUN pip3 install uvloop==0.14 
 RUN pip3 install pycodestyle==2.3.1 
 RUN pip3 install grpcio-tools
+RUN pip3 install grpcio
 RUN pip3 install nose2==0.7.2 
 RUN pip3 install pycrypto 
 RUN pip3 install rethinkdb 
