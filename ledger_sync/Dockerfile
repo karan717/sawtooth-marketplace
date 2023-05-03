@@ -11,18 +11,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+#Code adapted by Karan Kajani from https://github.com/hyperledger-archives/sawtooth-marketplace.git
 # -----------------------------------------------------------------------------
 
 FROM ubuntu:16.04
 
-RUN apt-get install -y -q python3-sawtooth-sdk protobuf-compiler
 
 RUN echo "deb apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8AA7AF1F1091A5FD" && \
     echo 'deb http://repo.sawtooth.me/ubuntu/1.0/stable xenial universe' >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y --allow-unauthenticated -q python3-grpcio-tools=1.1.3-1 \
         python3-pip \
-        python3-sawtooth-sdk
+        python3-sawtooth-sdk \
+        python3-protobuf
 
 RUN pip3 install rethinkdb
 

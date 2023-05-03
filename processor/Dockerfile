@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+#Code adapted by Karan Kajani from https://github.com/hyperledger-archives/sawtooth-marketplace.git
 # -----------------------------------------------------------------------------
 
 FROM ubuntu:16.04
@@ -20,9 +22,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8AA7AF1F10
     apt-get update
 
 RUN apt-get install -y -q python3-sawtooth-sdk \
-    python3-protobuf
+    python3-pip
 
-#RUN pip3 install protobuf
+RUN pip3 install protobuf==3.19.4
 
 WORKDIR /project/sawtooth-marketplace
 
