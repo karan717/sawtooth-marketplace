@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+#Code adapted by Karan Kajani from https://github.com/hyperledger-archives/sawtooth-marketplace.git
 # -----------------------------------------------------------------------------
 
 # This Dockerfile is for running protogen, lint, and unit-tests
@@ -43,8 +45,6 @@ RUN pip3 install bcrypt==3.1.5
 RUN pip3 install ujson==3.1.0 
 RUN pip3 install uvloop==0.14 
 RUN pip3 install pycodestyle==2.3.1 
-RUN pip3 install grpcio-tools
-RUN pip3 install grpcio
 RUN pip3 install nose2==0.7.2 
 RUN pip3 install pycrypto 
 RUN pip3 install rethinkdb 
